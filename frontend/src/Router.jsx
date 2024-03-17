@@ -1,15 +1,14 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
-import { ToastContainer } from "react-toastify";
+import { Routes, Route, BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
-import { HomePage } from "./pages/HomePage";
-import { NotFoundPage } from "./pages/NotFoundPage";
-import { LoginPage } from "./pages/auth/LoginPage"
-import { RegisterPage } from "./pages/auth/RegisterPage"
-import { Logout } from "./pages/auth/Logout"
-import { ProfilePage } from "./pages/ProfilePage"
+import { HomePage } from './pages/HomePage';
+import { NotFoundPage } from './pages/NotFoundPage';
+import { LoginPage } from './pages/auth/LoginPage';
+import { RegisterPage } from './pages/auth/RegisterPage';
+import { Logout } from './pages/auth/Logout';
+import { ProfilePage } from './pages/ProfilePage';
 
 export const Router = () => {
-
   return (
     <BrowserRouter>
       <Routes>
@@ -33,5 +32,5 @@ export const Router = () => {
         theme="light"
       />
     </BrowserRouter>
-  )
+  );
 };

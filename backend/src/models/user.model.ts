@@ -1,18 +1,30 @@
-import mongoose, { Schema, Document } from "mongoose";
+import mongoose, { Schema, Document } from 'mongoose';
+
+export interface EventType {
+  description: string;
+  allDay: boolean;
+  start: Date;
+  end: Date;
+}
+
+export interface ToDoType {
+  title: string;
+  color: string;
+  urgency: string;
+}
 
 export interface IUser extends Document {
-  email: string;
-  name: string;
+  username: string;
   password: string;
-  admin: boolean;
+  events: EventType[];
+  toDos: ToDoType[];
 }
 
 const UserSchema: Schema = new Schema({
-  email: { type: String, required: true, unique: true },
-  name: { type: String, required: true },
+  username: { type: String, required: true, unique: true },
   password: { type: String, required: true },
-  admin: { type: Boolean, default: false },
+  events: [],
+  toDos: [],
 });
 
-// Export the model and return your IUser interface
-export default mongoose.model<IUser>("User", UserSchema);
+export default mongoose.model<IUser>('User', UserSchema);

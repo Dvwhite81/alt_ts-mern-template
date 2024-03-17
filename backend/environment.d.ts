@@ -1,8 +1,7 @@
 export type User = {
   id: string;
-  email: string;
-  name: string;
-  isAdmin: boolean;
+  username: string;
+  password: string;
 };
 
 declare global {
