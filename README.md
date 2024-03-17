@@ -1,1 +1,1 @@
-# MERN stack Authentication
+# ts-mern-template
